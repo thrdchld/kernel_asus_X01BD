@@ -536,8 +536,8 @@ static int smblib_set_adapter_allowance(struct smb_charger *chg,
 	return rc;
 }
 
-#define MICRO_5V	5000000
-#define MICRO_9V	9000000
+#define MICRO_5V	6000000
+#define MICRO_9V	10000000
 #define MICRO_12V	12000000
 static int smblib_set_usb_pd_allowed_voltage(struct smb_charger *chg,
 					int min_allowed_uv, int max_allowed_uv)
@@ -2681,14 +2681,14 @@ int smblib_get_prop_die_health(struct smb_charger *chg,
 	return 0;
 }
 
-#define SDP_CURRENT_UA			500000
-#define CDP_CURRENT_UA			1500000
+#define SDP_CURRENT_UA			700000
+#define CDP_CURRENT_UA			1800000
 #ifdef CONFIG_MACH_ASUS_SDM660
-#define DCP_CURRENT_UA			2000000
+#define DCP_CURRENT_UA			4000000
 #else
-#define DCP_CURRENT_UA			1500000
+#define DCP_CURRENT_UA			1800000
 #endif
-#define HVDCP_CURRENT_UA		3000000
+#define HVDCP_CURRENT_UA		7000000
 #define TYPEC_DEFAULT_CURRENT_UA	900000
 #define TYPEC_MEDIUM_CURRENT_UA		1500000
 #define TYPEC_HIGH_CURRENT_UA		3000000
