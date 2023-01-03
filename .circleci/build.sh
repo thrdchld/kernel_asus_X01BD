@@ -15,11 +15,7 @@ export ARCH=arm64
 export KBUILD_BUILD_HOST=MyLabs
 export KBUILD_BUILD_USER=Aghsina
 # sticker plox
-function sticker() {
-    curl -s -X POST "https://api.telegram.org/bot$token/sendSticker" \
-        -d sticker="CAACAgEAAxkBAAEnKnJfZOFzBnwC3cPwiirjZdgTMBMLRAACugEAAkVfBy-aN927wS5blhsE" \
-        -d chat_id=$chat_id
-}
+
 # Send info plox channel
 function sendinfo() {
     curl -s -X POST "https://api.telegram.org/bot$token/sendMessage" \
@@ -69,7 +65,6 @@ function zipping() {
     zip -r9 Aghisna-X01BD-${TANGGAL}.zip *
     cd ..
 }
-sticker
 sendinfo
 compile
 zipping
