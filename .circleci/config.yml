@@ -9,7 +9,7 @@ jobs:
            git config --global user.name "RooGhz720"
            git config --global user.email "RooGhz720@gmail.com"
            git config --global color.ui false
-           git clone --depth=1 https://github.com/RooGhz720/kernel_asus_X01BD -b initial .
+           git clone --depth=1 https://github.com/RooGhz720/kernel_asus_X01BD -b testing .
            bash .circleci/build.sh
 workflows:
   version: 2.1
